@@ -5,10 +5,6 @@ import { theme } from 'constants';
 import { Item, Button } from './Contact.styled';
 
 export const Contact = ({ id, name, number, deleteContact }) => {
-  const handleClickDelete = e => {
-    deleteContact(id);
-  };
-
   return (
     <Item>
       <Box display="flex" alignItems="center" gridGap={3} minWidth="nameBox">
@@ -23,7 +19,7 @@ export const Contact = ({ id, name, number, deleteContact }) => {
         minWidth="numberBox"
       >
         <span>{number}</span>
-        <Button name={id} type="button" onClick={handleClickDelete}>
+        <Button name={id} type="button" onClick={deleteContact}>
           <ImBin size={theme.sizes.iconM} />
         </Button>
       </Box>

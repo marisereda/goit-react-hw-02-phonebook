@@ -11,7 +11,7 @@ export const ContactList = ({ filteredContacts, deleteContact }) => {
           id={id}
           name={name}
           number={number}
-          deleteContact={deleteContact}
+          deleteContact={() => deleteContact(id)}
         />
       ))}
     </List>
