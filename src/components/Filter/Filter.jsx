@@ -1,10 +1,18 @@
+import PropTypes from 'prop-types';
+import { InputTitle, Input } from './Filter.styled';
+
 export const Filter = ({ handleChangeFilter, filterValue }) => (
   <div>
-    <p>Find contacts by name</p>
-    <input
+    <InputTitle htmlFor="filter">Find contacts by name</InputTitle>
+    <Input
       name="filter"
       onChange={handleChangeFilter}
       value={filterValue}
-    ></input>
+    ></Input>
   </div>
 );
+
+Filter.propTypes = {
+  handleChangeFilter: PropTypes.func.isRequired,
+  filterValue: PropTypes.string.isRequired,
+};

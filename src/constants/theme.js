@@ -2,40 +2,30 @@ export const theme = {
   space: [0, 2, 4, 8, 16, 32, 64, 128, 256],
 
   fontSizes: {
-    text: '20px', //1.25rem',
-    numbers: '20px', //1.125rem
+    input: '24px',
+    text: '20px',
     button: '18px',
-    label: '14px', //0.875rem
   },
 
   colors: {
     bgPrimary: '#ffffff',
-    bgDark: '#e7ecf2',
     bgLight: '#f3f6f9',
-    bgTableHead: '#00bcd5',
     bgButton: '#00bcd5',
-    bgStatusOnline: 'green',
-    bgStatusOffline: 'red',
 
+    label: '#00bcd5',
     textAccent: '#3c4756',
-    textLight: '#b1b9c2',
     textPrimary: 'white',
-
-    iconBad: 'red',
-    iconNeutral: '#ffd500',
-    iconGood: 'green',
   },
 
   sizes: {
     buttonWidth: '100px',
-    icon: '64px',
+    iconS: '15px',
+    iconM: '20px',
+    input: '300px',
 
+    nameBox: '200px',
+    numberBox: '150px',
     sectionBox: '500px',
-    statisticBox: '64px',
-    friendBox: '240px',
-    statusBox: '16px',
-    profileAvatar: '120px',
-    friendListAvatar: '48px',
   },
 
   borders: {

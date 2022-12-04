@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import { nanoid } from 'nanoid';
-
 import { GlobalStyle } from 'components/GlobalStyle';
 import { Box } from 'components/Box';
 import { Section } from 'components/Section';
-import { ContactForm } from 'components/AddContactForm';
+import { ContactForm } from 'components/ContactForm';
 import { ContactList } from 'components/ContactList';
 import { Filter } from 'components/Filter';
-
 import { theme } from 'constants';
 
 export class App extends Component {
@@ -21,6 +19,7 @@ export class App extends Component {
     filter: '',
   };
 
+  // --------------------------------
   addContact = ({ name, number }) => {
     const seekingName = name.toLowerCase().trim();
     const foundName = this.state.contacts.find(
@@ -42,6 +41,7 @@ export class App extends Component {
     }));
   };
 
+  // --------------------------------
   deleteContact = id => {
     this.setState(prevState => {
       const contacts = prevState.contacts.filter(contact => contact.id !== id);
@@ -49,11 +49,13 @@ export class App extends Component {
     });
   };
 
+  // --------------------------------
   handleChangeFilter = e => {
     const filter = e.target.value.toLowerCase();
     this.setState({ filter });
   };
 
+  // --------------------------------
   getFilteredContacts = () => {
     let { contacts, filter } = this.state;
     filter = filter.trim();
@@ -62,8 +64,8 @@ export class App extends Component {
       : contacts;
   };
 
+  // --------------------------------
   render() {
-    // const filteredContacts = this.getFilteredContacts();
     return (
       <Box
         display="flex"
